@@ -1,3 +1,19 @@
+:root {
+  --clr-white: #ffffff;
+
+  --clr-reaction-bg: #fef6f5;
+  --clr-reaction-text: #f85258;
+  --clr-memory-bg: #fffbf2;
+  --clr-memory-text: #fab037;
+  --clr-verbal-bg: #f3fafa;
+  --clr-verbal-text: #33bb90;
+  --clr-visual-bg: #f3f3fd;
+  --clr-visual-text: #;
+  --clr-button-bg: #313c58;
+}
+
+/* *** *** *** *** *** */
+
 *,
 *::before,
 *::after {
@@ -14,11 +30,15 @@ body {
   min-height: 100vh;
 }
 
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
 
-
-
-
-
+/* *** *** *** *** *** */
 
 .attribution {
   font-size: 11px;
