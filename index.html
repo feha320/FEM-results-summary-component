@@ -14,27 +14,29 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Results summary component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style></style>
   </head>
   <body>
-    <div id="result-section">
-      <h1 id="result-header">Your Result</h1>
-      <div id="result">76 of 100</div>
-      <div id="result-feedback">Great</div>
-      <div id="result-comment">
-        You scored higher than 65% of the people who have taken these tests.
+    <div id="section-wrapper">
+      <div id="result-section">
+        <h1 id="result-header">Your Result</h1>
+        <div id="score">
+          <div id="score-achieved">76</div>
+          <div id="score-max">of 100</div>
+        </div>
+        <div id="result-feedback">Great</div>
+        <div id="result-comment">
+          You scored higher than 65% of the people who have taken these tests.
+        </div>
       </div>
-    </div>
 
-    <div id="summary-section">
-      <h1 id="summary-header">Summary</h1>
-      <div class="categorie-points">Reaction 80 / 100</div>
-      <div class="categorie-points">Memory 92 / 100</div>
-      <div class="categorie-points">Verbal 61 / 100</div>
-      <div class="categorie-points">Visual 72 / 100</div>
-      <button id="continue-btn">Continue</button>
+      <div id="summary-section">
+        <h1 id="summary-header">Summary</h1>
+        <div class="categorie-points" id="reaction-score">Reaction 80 / 100</div>
+        <div class="categorie-points" id="memory-score">Memory 92 / 100</div>
+        <div class="categorie-points" id="verbal-score">Verbal 61 / 100</div>
+        <div class="categorie-points" id="visual-score">Visual 72 / 100</div>
+        <button id="continue-btn">Continue</button>
+      </div>
     </div>
     <div class="attribution">
       Challenge by

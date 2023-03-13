@@ -1,6 +1,11 @@
 :root {
   --clr-white: #ffffff;
 
+  --clr-result-bg-top: #674cfa;         /* not sure */
+  --clr-result-bg-bottom: #3938e8;      /* not sure */
+  --clr-result-circle-top: #4d2ec8;     /* not sure */
+  --clr-result-circle-bottom: #4a40ec;  /* not sure */  
+
   --clr-reaction-bg: #fef6f5;
   --clr-reaction-text: #f85258;
   --clr-memory-bg: #fffbf2;
@@ -8,8 +13,19 @@
   --clr-verbal-bg: #f3fafa;
   --clr-verbal-text: #33bb90;
   --clr-visual-bg: #f3f3fd;
-  --clr-visual-text: #;
+  --clr-visual-text: #1a31d2;
   --clr-button-bg: #313c58;
+
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.50rem;
+  --fs-700: 2rem;
+  --fs-800: 4rem;
+  --fs-900: 5rem;
+
+  --fw-regular: 500;
+  --fw-semi-bold: 700;
+  --fw-bold: 800;
 }
 
 /* *** *** *** *** *** */
@@ -39,6 +55,73 @@ video {
 }
 
 /* *** *** *** *** *** */
+
+#section-wrapper {
+  max-width: 740px;
+  height: 512px;
+  margin: 50px auto;
+  display: flex;
+}
+
+#result-section {
+  background: linear-gradient(var(--clr-result-bg-top), var(--clr-result-bg-bottom));
+  border-radius: 30px;
+  max-width: 360px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  color: var(--clr-white);
+}
+
+#result-header {
+  font-size: var(--fs-700);
+}
+
+#score {
+  background: linear-gradient(var(--clr-result-circle-top), var(--clr-result-circle-bottom));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+#score-achieved {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+}
+
+#score-max {
+  font-size: var(--fs-500);
+}
+
+#result-feedback {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-semi-bold);
+}
+
+#result-comment {
+  text-align: center;
+  font-size: var(--fs-500);
+}
+
+/* *** *** *** *** *** */
+
+#summary-section {
+  border: 1px solid red;
+  max-width: 360px;
+  background: var(--clr-white);
+  flex: 1;
+  padding: 20px;
+}
+
+/* *** *** *** *** *** */
+
 
 .attribution {
   font-size: 11px;
