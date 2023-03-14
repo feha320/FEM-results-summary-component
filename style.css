@@ -1,20 +1,22 @@
 :root {
-  --clr-white: #ffffff;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pale-blue: hsl(221, 100%, 98%);
+  --clr-light-grey: hsl(0, 0%, 75%);
 
-  --clr-result-bg-top: #674cfa;         /* not sure */
-  --clr-result-bg-bottom: #3938e8;      /* not sure */
-  --clr-result-circle-top: #4d2ec8;     /* not sure */
-  --clr-result-circle-bottom: #4a40ec;  /* not sure */  
+  --clr-result-bg-top: hsl(252, 100%, 67%);         
+  --clr-result-bg-bottom: hsl(241, 81%, 54%);      
+  --clr-result-circle-top: hsla(256, 72%, 46%, 1);     
+  --clr-result-circle-bottom: hsla(241, 72%, 46%, 0);    
 
   --clr-reaction-bg: #fef6f5;
-  --clr-reaction-text: #f85258;
+  --clr-reaction-text: hsl(0, 100%, 67%);
   --clr-memory-bg: #fffbf2;
-  --clr-memory-text: #fab037;
+  --clr-memory-text: hsl(39, 100%, 56%);
   --clr-verbal-bg: #f3fafa;
-  --clr-verbal-text: #33bb90;
+  --clr-verbal-text: hsl(166, 100%, 37%);
   --clr-visual-bg: #f3f3fd;
-  --clr-visual-text: #1a31d2;
-  --clr-button-bg: #313c58;
+  --clr-visual-text: hsl(234, 85%, 45%);
+  --clr-button-bg: hsl(224, 30%, 27%);
 
   --fs-400: 1rem;
   --fs-500: 1.25rem;
@@ -26,6 +28,13 @@
   --fw-regular: 500;
   --fw-semi-bold: 700;
   --fw-bold: 800;
+}
+
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+  font-display: swap;
+  font-weight: 100 900;
 }
 
 /* *** *** *** *** *** */
@@ -44,6 +53,8 @@
 
 body {
   min-height: 100vh;
+  font-family: HankenGrotesk;
+  background: var(--clr-pale-blue);
 }
 
 img,
@@ -61,19 +72,21 @@ video {
   height: 512px;
   margin: 50px auto;
   display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  background: var(--clr-white);
 }
 
 #result-section {
   background: linear-gradient(var(--clr-result-bg-top), var(--clr-result-bg-bottom));
   border-radius: 30px;
-  max-width: 360px;
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 40px 60px;
-  color: var(--clr-white);
+  color: var(--clr-light-grey);
 }
 
 #result-header {
@@ -92,6 +105,7 @@ video {
 }
 
 #score-achieved {
+  color: var(--clr-white);
   font-size: var(--fs-900);
   font-weight: var(--fw-bold);
 }
@@ -113,11 +127,51 @@ video {
 /* *** *** *** *** *** */
 
 #summary-section {
-  border: 1px solid red;
   max-width: 360px;
   background: var(--clr-white);
   flex: 1;
-  padding: 20px;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#summary-header {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-semi-bold);
+}
+
+.categorie-points {
+  border: 1px solid red;
+  padding: 20px 50px;
+}
+
+#reaction-score {
+  background: var(--clr-reaction-bg);
+  color: var(--clr-reaction-text);
+}
+
+#memory-score {
+  background: var(--clr-memory-bg);
+  color: var(--clr-memory-text);
+}
+
+#verbal-score {
+  background: var(--clr-verbal-bg);
+  color: var(--clr-verbal-text);
+}
+
+#visual-score {
+  background: var(--clr-visual-bg);
+  color: var(--clr-visual-text);
+}
+
+#continue-btn {
+  background: var(--clr-button-bg);
+  color: var(--clr-white);
+  padding: 15px 100px;
+  border-radius: 30px;
 }
 
 /* *** *** *** *** *** */
